@@ -1,3 +1,5 @@
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql"%>
 <%-- 
     Document   : index.jsp
     Created on : Jul 25, 2016, 11:54:28 PM
@@ -17,6 +19,7 @@
         <link rel="stylesheet" type="text/css" href="WEB-INF/addIt/css/style.css"/>
     </head>
     <body>
+        
        
         <form action="cartaoD.jsp" method="POST">
         
@@ -25,14 +28,14 @@
              <fieldset>
                 <legend> Informação do Paciente</legend>
                 
-                <label for="nome">Nome:</label> <input type="text" id="nome"/> <label for="apelido">Apelido:</label> <input type="text" id="apelido"/> <br/>
-                <label for="bi">B.I.:</label> <input type="text" id="bi"/>  <label for="datan">Data de Nascimento:</label> <input type="datetime" id="datan"/> <br/>
+                <label for="nome">Nome:</label> <input type="text" id="nome" name="nome"/> <label for="apelido">Apelido:</label> <input type="text" name="apelido" id="apelido"/> <br/>
+                <label for="bi">B.I.:</label> <input name="bi" type="text" id="bi"/>  <label for="datan">Data de Nascimento:</label> <input type="datetime" name="datan" id="datan"/> <br/>
                 <label for="sexo" >Sexo:</label>         <input type="radio" name="sexo" value="M"/> Masculino 
                 <input type="radio" name="sexo" value="F"/> Feminino <br/>
                 
-                <label for="estadoc">Estado Civil:</label> 
+                <label >Estado Civil:</label> 
                 
-                <select id="checkestado">   
+                <select id="cboestado">   
                     <optgroup>
                         <option id="solteiro">Solteiro </option>
                         <option id="casado"> Casado</option>
@@ -57,8 +60,8 @@
                 </select>   
                 <label for="localdet">Local de Trabalho:</label>  <input type="text" id="localdet"/>
                 
-                <label for="natural">Naturalidade:</label>  <input type="text" id="natural"/> <br/> <label for="residenciaP">Residência:</label>  <input type="text" id="residenciaP" placeholder="Província"/><input type="text" id="bairro" placeholder="Bairro"/><input type="text" id="rua/avenida" placeholder="Rua/Avenida"/><input type="text" id="casan" placeholder="Número da casa"/>
-                <label for="filiacao">Filiação:</label> <input type="text" placeholder="Nome do Pai" id="filiacao"/> <input type="text" placeholder="Nome da Mãe"/>
+                <label for="naturalidade">Naturalidade:</label>  <input type="text" id="naturalidade" name="naturalidade"/> <br/> <label for="residenciaP">Residência:</label>  <input type="text" id="residenciaP" placeholder="Província"/><input type="text" id="bairro" placeholder="Bairro"/><input type="text" id="rua/avenida" placeholder="Rua/Avenida"/><input type="text" id="casan" placeholder="Número da casa"/>
+                <label for="nomepai">Filiação:</label> <input type="text" placeholder="Nome do Pai" id="nomepai"/> <input type="text" placeholder="Nome da Mãe" id="nomemae"/>
             </fieldset> 
              <input type="submit" id="registar" value="Enviar"/>
              
